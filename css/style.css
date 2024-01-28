@@ -1,0 +1,196 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+}
+
+/* =============spinner ================= */
+.spinner-parent {
+    background-color: rgb(0, 0, 0);
+    z-index: 5;
+}
+
+.spinner {
+    /* border: 6px solid rgba(0, 0, 0, 0.1); */
+    border-top: 6px solid #ff0b0b;
+    border-radius: 50%;
+    width: 135px;
+    height: 135px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    animation: spin 0.7s linear infinite;
+    position: absolute;
+}
+
+.spinnerTwo {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 130px;
+    height: 130px;
+    border-bottom: 6px solid #09c;
+    border-radius: 50%;
+    animation: spin 1.5s linear infinite;
+    z-index: 3;
+}
+
+.spinnerThree {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 130px;
+    height: 130px;
+    border-bottom: 6px solid rgb(0, 204, 48);
+    border-radius: 50%;
+    animation: spinTwo 1s linear infinite;
+    z-index: 3;
+}
+
+.spinnerFour {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 130px;
+    height: 130px;
+    border-bottom: 6px solid rgb(0, 61, 204);
+    border-radius: 50%;
+    animation: spinTwo 0.1s linear infinite;
+    z-index: 3;
+}
+
+.spinnerFive {
+    border-bottom: 6px solid rgb(204, 0, 187);
+
+    border-radius: 50%;
+    width: 135px;
+    height: 135px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    animation: spinTwo 0.7s linear infinite;
+    position: absolute;
+}
+
+.spinnerSix {
+    border-bottom: 6px solid rgb(204, 204, 0);
+
+    border-radius: 50%;
+    width: 135px;
+    height: 135px;
+    left: 49.8%;
+    top: 49.8%;
+    transform: translate(-50%, -50%);
+    animation: spin 0.7s linear infinite;
+    position: absolute;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes spinTwo {
+    0% {
+        transform: rotate(360deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+/* ============end spinner============= */
+.side {
+    z-index: 999;
+}
+
+.sideBar {
+    background-color: rgb(0, 0, 0);
+    width: 310px;
+    display: none;
+}
+
+.barsSideBar {
+    background-color: rgb(255, 255, 255);
+    width: 65px;
+}
+
+.logo img {
+    width: 100%;
+}
+
+.bars {
+    cursor: pointer;
+}
+
+#listSideBar li {
+    list-style: none;
+    cursor: pointer;
+    color: white;
+}
+
+.media {
+    display: none;
+}
+
+.imageParent img {
+    width: 100%;
+}
+
+.imageParent {
+    cursor: pointer;
+}
+
+.imageParent .layer {
+    position: absolute;
+    top: 180%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(171, 171, 171, 0.8);
+    transition: top 0.5s ease;
+}
+
+.imageParent:hover .layer {
+    top: 0;
+}
+
+
+#searchSection,
+#categoriesSection,
+#areaSection,
+#ingredientsSection,
+#contactSection {
+    display: none;
+    height: fit-content;
+}
+
+.areaConetnt {
+    cursor: pointer;
+}
+
+#categoriesSection {
+    display: flex;
+}
+
+#searchSection,
+#contactSection {
+    height: 100%;
+}
+
+.col-md-3 {
+    padding-block: 10px;
+}

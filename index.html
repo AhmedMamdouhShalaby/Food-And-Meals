@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon-16x16.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Yummy</title>
+</head>
+
+<body>
+
+    <div class="container  position-absolute top-0 bottom-0 start-0 end-0 d-flex flex-wrap bg-black py-5"
+        id="categoriesSection">
+        <div class="row py-4 " id="categoriesSectionRow">
+            <div class="col-md-3">
+                <div class="imageParent rounded-2 position-relative overflow-hidden">
+                    <img src="29melting-face-emoji-mediumSquareAt3X-v2-removebg-preview.png" alt="food">
+                    <div class="layer d-flex justify-content-center align-items-center">
+                        <h2>ahmed section</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section id="searchSection" class="search position-absolute top-0 bottom-0 start-0 end-0  bg-black py-5">
+        <div class="container d-flex justify-content-between">
+            <input id="searchByName" oninput="searchBn(this.value)" type="text" placeholder="Search By Name"
+                class="form-control bg-transparent text-white me-1">
+            <input id="searchByFirstLetter" maxlength="1" oninput="searchBFl(this.value)" type="text"
+                placeholder="Search By First Letter" class="form-control bg-transparent text-white ms-1">
+        </div>
+        <div class="row searched pt-5" id="searched"></div>
+    </section>
+    <section id="areaSection" class="area position-absolute top-0 bottom-0 start-0 end-0  bg-black py-5">
+        <div class="container">
+            <div class="row" id="rowArea">
+                <div class="col-md-3">
+                    <div class="areaConetnt text-center" id="areaContent">
+                        <i class="fa-solid fa-house-laptop fa-4x text-white"></i>
+                        <h3 class="text-white text-capitalize">amirecan</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="ingredientsSection" class="ingredients position-absolute top-0 bottom-0 start-0 end-0  bg-black py-5">
+        <div class="container">
+            <div class="row" id="ingredientsRow">
+                <div class="col-md-3">
+                    <div class="ingredientsContent text-center">
+                        <i class="fa-solid fa-drumstick-bite fa-4x text-white my-2"></i>
+                        <h3 class="text-capitalize text-white my-2">salmon</h3>
+                        <p class="text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, sunt
+                            pariatur? Doloribus velit aliquid consequatur.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contactSection"
+        class="contactSection position-absolute top-0 bottom-0 start-0 end-0  bg-black py-5 px-5">
+        <div class="container h-100 d-flex justify-content-center align-items-center">
+            <div class="contactContent w-75 d-flex flex-wrap" id="contactContent">
+                <div class="inpParent p-2 w-50">
+                    <input type="text" id="nameInput" oninput="inputsValidation()" placeholder="Enter Your Name"
+                        class="form-control">
+                    <div id="nameAlert" class="alert alert-danger w-100 mt-2 d-none">
+                        Special characters and numbers not allowed
+                    </div>
+                </div>
+                <div class="inpParent p-2 w-50">
+                    <input type="email" id="emailInput" oninput="inputsValidation()" placeholder="Enter Your Email"
+                        class="form-control">
+                    <div id="emailAlert" class="alert alert-danger w-100 mt-2 d-none">
+                        Invalid email format
+                    </div>
+                </div>
+                <div class="inpParent p-2 w-50">
+                    <input type="tel" id="phoneInput" oninput="inputsValidation()" placeholder="Enter Your Phone"
+                        class="form-control">
+                    <div id="phoneAlert" class="alert alert-danger w-100 mt-2 d-none">
+                        Invalid phone number
+                    </div>
+                </div>
+                <div class="inpParent p-2 w-50">
+                    <input type="number" id="ageInput" oninput="inputsValidation()" placeholder="Enter Your Age"
+                        class="form-control">
+                    <div id="ageAlert" class="alert alert-danger w-100 mt-2 d-none">
+                        Invalid age
+                    </div>
+                </div>
+                <div class="inpParent p-2 w-50">
+                    <input type="password" id="passwordInput" oninput="inputsValidation()"
+                        placeholder="Enter Your Password" class="form-control">
+                    <div id="passwordAlert" class="alert alert-danger w-100 mt-2 d-none">
+                        Password must contain at least one digit and one lowercase letter, and be at least 8 characters
+                        long
+                    </div>
+                </div>
+                <div class="inpParent p-2 w-50">
+                    <input type="password" id="repasswordInput" oninput="inputsValidation()" placeholder="Repassword"
+                        class="form-control">
+                    <div id="repasswordAlert" class="alert alert-danger w-100 mt-2 d-none">
+                        Passwords do not match
+                    </div>
+                </div>
+                <div class="btnParent w-100 text-center py-2">
+                    <button id="submitBtn" class="btn bg-transparent border-danger text-danger" disabled>Submit</button>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+    <div id="spinnerParent" class="spinner-parent w-100 vh-100 position-absolute">
+        <div class="spinner"></div>
+        <div class="spinnerTwo"></div>
+        <div class="spinnerThree"></div>
+        <div class="spinnerFour"></div>
+        <div class="spinnerFive"></div>
+        <div class="spinnerSix"></div>
+    </div>
+    <div class="side min-vh-100  position-fixed d-flex" id="side">
+        <div class="sideBar overflow-hidden" id="sideBar">
+            <div class="parent d-flex justify-content-between h-100 flex-column">
+                <ul id="listSideBar" class="py-4 px-3 overflow-hidden">
+                    <li class="fw-medium position-relative my-2" id="searchLnk">Search</li>
+                    <li class="fw-medium position-relative top-0 my-2" id="categoriesLnk">Categories</li>
+                    <li class="fw-medium position-relative top-0 my-2" id="areaLnk">Area</li>
+                    <li class="fw-medium position-relative top-0 my-2" id="ingredientsLnk">Ingredients</li>
+                    <li class="fw-medium position-relative top-0 my-2" id="contactLnk">Contact Us</li>
+                </ul>
+                <div class="media position-fixed bottom-0 p-3">
+                    <div class="icons text-white">
+                        <i class="fa-brands fa-facebook"></i>
+                        <i class="fa-brands fa-twitter"></i>
+                        <i class="fa-solid fa-globe"></i>
+                    </div>
+                    <div class="p text-white">
+                        Copyright Â© 2019 All Rights
+                        Reserved.
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="barsSideBar d-flex flex-column justify-content-between align-items-center py-3" id="barsSideBar">
+            <div class="logo py-3 px-1">
+                <img src="29melting-face-emoji-mediumSquareAt3X-v2-removebg-preview.png" alt="">
+            </div>
+            <div class="bars fw-bold fs-2" id="bars">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <div class="connnections d-flex flex-column justify-content-between align-items-center py-3">
+                <i class="fa-solid fa-globe pb-2"></i>
+                <i class="fa-solid fa-share-nodes pt-2"></i>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row py-4 " id="mainSection">
+            <!-- <div class="col-md-3">
+                <div class="imageParent rounded-2 position-relative overflow-hidden">
+                    <img src="29melting-face-emoji-mediumSquareAt3X-v2-removebg-preview.png" alt="food">
+                    <div class="layer d-flex justify-content-center align-items-center">
+                        <h2>ahmed</h2>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+    </div>
+    <section class="detailes position-absolute top-0 bottom-0 start-0 end-0 bg-black d-none z-3 pt-5" id="detailes">
+        <div class="container">
+            <div class="row" id="rowDetailes">
+                <div class="col-md-4">
+                    <div class="deataileHead">
+                        <img src="29melting-face-emoji-mediumSquareAt3X-v2-removebg-preview.png" class="w-100" alt="">
+                        <h2 class="text-white" id="foodName">Ahmed</h2>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <h2 class="text-white">instructions</h2>
+                    <p class="text-white" id="explainFood">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                        Accusamus nisi modi
+                        dolor iste nihil
+                        sunt quo iusto perspiciatis eos consectetur, labore eius tempora recusandae ullam ut quam
+                        cupiditate aliquam. Veritatis?
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. A qui dolor dolorem maiores, possimus
+                        perspiciatis. Doloremque delectus veritatis non sapiente labore provident ratione maxime
+                        officiis,
+                        sed dolore sequi placeat porro!
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum aut maxime placeat nemo, vel
+                        beatae
+                        nihil sed illum aspernatur est impedit inventore minus fugiat neque totam dignissimos provident
+                        officia quo?
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab quia provident tempore placeat
+                        nihil
+                        odit? Nemo soluta recusandae, culpa inventore repellendus blanditiis dolorum, deleniti corrupti
+                        delectus fuga asperiores ex quod!
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque error dolore molestiae
+                        laboriosam
+                        ea nihil perspiciatis quam esse illum dicta asperiores maxime iure, incidunt perferendis ullam
+                        aliquid cum quaerat libero.
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore maiores culpa vero
+                        praesentium
+                        numquam iste non incidunt assumenda repellat saepe cumque, dolore aspernatur nam laboriosam esse
+                        quas laborum nesciunt tempora. </p>
+                    <h2 id="area" class="fw-bold  text-white text-capitalize">Area: <span
+                            class="fs-3 fw-medium text-capitalize">turkish</span></h2>
+                    <h2 id="category" class="fw-bold  text-white   text-capitalize">category: <span
+                            class="fs-3 fw-medium text-capitalize">side</span>
+                    </h2>
+                    <div class="recipesDetaileas mb-3" id="recipesDetaileas">
+                        <h2 id="recipes" class="fw-bold mb-3   text-white  text-capitalize">recipes: </h2>
+                        <span class="alert alert-info m-2 p-1">turkish</span>
+                    </div>
+                    <div class="tagsContent mb-3" id="tagsContent">
+                        <h2 id="tags" class="fw-bold   text-white  text-capitalize mb-3">tags: </h2>
+                        <span class="alert alert-danger m-2 p-1">soup</span>
+                    </div>
+                    <a href="#" class="btn btn-success">Source</a>
+                    <a href="#" class="btn btn-danger">YouTube</a>
+                </div>
+            </div>
+            <button class="btn-close btn-close-white" id="btnDetailesClose"></button>
+        </div>
+    </section>
+
+    <script src="js/code.jquery.com_jquery-3.7.0.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
