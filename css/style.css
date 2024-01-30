@@ -169,14 +169,14 @@ body {
 }
 
 
-#searchSection,
+/* #searchSection,
 #categoriesSection,
 #areaSection,
 #ingredientsSection,
 #contactSection {
     display: none;
     height: fit-content;
-}
+} */
 
 .areaConetnt {
     cursor: pointer;
@@ -193,4 +193,10 @@ body {
 
 .col-md-3 {
     padding-block: 10px;
+}
+
+
+.error-message {
+    color: red;
+    margin-top: 5px;
 }
